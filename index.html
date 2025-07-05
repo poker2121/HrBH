@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تحليل الشخصية المهنية</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+   
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  </head>
+  <body>
+    <!-- Background Animation -->
+    <div class="background-animation">
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
+      <div class="floating-shape shape-3"></div>
+      <div class="floating-shape shape-4"></div>
+    </div>
+
+    <div class="main-wrapper">
+      <div class="container">
+        <div class="quiz-container shadow-sm position-relative">
+          <!-- Logo Circle -->
+          <div class="logo-circle">
+            <div class="icon-wrapper">
+              <img
+                src="https://i.postimg.cc/J0vfM3Yy/business-haven-consulting-logo.jpg"
+                width="100"
+                height="100"
+                alt="Business Haven Logo"
+              />
+            </div>
+          </div>
+
+          <!-- User Form -->
+          <form
+            id="userForm"
+            class="user-form animate__animated animate__fadeInUp"
+          >
+            <div class="form-header">
+              <h2 class="form-title">تحليل الشخصية المهنية</h2>
+              <p class="form-subtitle">
+                اكتشف نقاط قوتك واحصل على تقييم شخصي مفصل
+              </p>
+            </div>
+
+            <div class="form-group">
+              <label for="userName" class="form-label">الاسم الكامل</label>
+              <input
+                type="text"
+                class="form-control custom-input"
+                id="userName"
+                placeholder="أدخل اسمك الكامل هنا"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="userPhone" class="form-label">رقم الهاتف</label>
+              <input
+                type="tel"
+                class="form-control custom-input"
+                id="userPhone"
+                placeholder="أدخل رقم هاتفك"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="userEmail" class="form-label">البريد الإلكتروني</label>
+              <input
+                type="email"
+                class="form-control custom-input"
+                id="userEmail"
+                placeholder="أدخل بريدك الإلكتروني"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn custom-btn">
+              <span class="btn-text">ابدأ التحليل الآن</span>
+            </button>
+          </form>
+
+          <!-- Quiz Content -->
+          <div id="quizContent" class="quiz-content" style="display: none">
+            <!-- Progress Bar -->
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+              </div>
+              <div class="progress-text">
+                <span id="questionNumber">1</span> من
+                <span id="totalQuestions">10</span>
+              </div>
+            </div>
+
+            <!-- Question -->
+            <div class="question-container">
+              <div id="question" class="question-text"></div>
+            </div>
+
+            <!-- Answers -->
+            <div id="answers" class="answers-container"></div>
+          </div>
+
+          <!-- Thank You Message -->
+          <div
+            id="thankYouMessage"
+            class="thank-you-message"
+            style="display: none"
+          >
+            <div class="success-icon">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="12" fill="#4CAF50" />
+                <path
+                  d="M9 12L11 14L15 10"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3>شكراً لك!</h3>
+            <p>تم إرسال تحليلك الشخصي إلى الإدارة بنجاح</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      (function () {
+        emailjs.init("KShcuTLxPbI-B4cZ3");
+      })();
+    </script>
+  </body>
+</html>
